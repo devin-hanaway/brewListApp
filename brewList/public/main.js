@@ -50,6 +50,7 @@ var state5 =""
 var addToId = ""
 var dataToAdd =""
 var wishItem =""
+var itemKey = ""
 
 
 $('document').ready(function(){
@@ -179,20 +180,20 @@ $('document').ready(function(){
   function createSimilar(logo, name, style, abv, brewery,city,state, number){
     var $similarBeer =
 
-          '<div class="suggestedBeer row" id="'+number+'">'+
-             '<img class="imageOne col l3" src="'+ logo +'">'+
-             '<div class="profile col l6" >'+
-               '<div class="name " >'+ name +'</div>'+
-               '<div class="style " >'+ style +'</div>'+
-               '<div class="abv " >'+ abv +" ABV"+ '</div>'+
-               '<div class="brewery " >'+ brewery +'</div>'+
-               '<div class="location " >'+ city+', '+state+'</div>'+
-             '</div>'+
-             '<div class="addFav col l3">'+
-                '<a class="btn-floating btn-large waves-effect waves-light red" >'+
-                '<i class="material-icons" id="'+number+'">'+'add'+'</i>'+'</a>'+
-              '</div>'+
-          '</div>'
+    '<div class="suggestedBeer row" >'+
+         '<img class="imageOne col l3" src="'+ logo +'">'+
+         '<div class="profile col l6" >'+
+           '<div class="name '+number+'" id="'+number+'">'+ name +'</div>'+
+           '<div class="style '+number+'" id="'+number+'">'+ style +'</div>'+
+           '<div class="abv '+number+'" id="'+number+'">'+ abv +" ABV"+ '</div>'+
+           '<div class="brewery '+number+'" id="'+number+'">'+ brewery +'</div>'+
+           '<div class="location '+number+'" id="'+number+'">'+ city+', '+state+'</div>'+
+         '</div>'+
+         '<div class="addFav col l3">'+
+            '<a class="btn-floating btn-large waves-effect waves-light red" >'+
+            '<i class="material-icons" id="'+number+'">'+'add'+'</i>'+'</a>'+
+          '</div>'+
+      '</div>'
 
     return $similarBeer
   }
@@ -231,7 +232,9 @@ $('document').ready(function(){
     console.log("hello")
     $('.material-icons').click(function(){
         addToId = ($(this).attr('id'))
-        dataToAdd = document.getElementById(addToId)
+        console.log(addToId)
+        dataToAdd = ($('.'+addToId).text())
+        // dataToAdd = document.getElementById(addToId)
         console.log("This is my key value")
         console.log(dataToAdd)
         var tag = "wishItem"+addToId
@@ -244,7 +247,7 @@ $('document').ready(function(){
     console.log(dataToAdd)
     console.log(tag)
     $wishItem = dataToAdd
-    var itemKey = tag
+    itemKey = tag
       console.log($wishItem)
       localStorage.setItem(itemKey, JSON.stringify($wishItem));
   }

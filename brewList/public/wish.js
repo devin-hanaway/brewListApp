@@ -1,11 +1,15 @@
 
 $('document').ready(function(){
-  var wishItem = localStorage.getItem("wishItem1")
+  for (var i = 0; i < localStorage.length; i++) {
+  var wishItem = localStorage.getItem(localStorage.key(i))
   appendWishItem(wishItem)
+
+  }
+
 })
 
 function appendWishItem(wishItem){
   console.log("is this what we want?")
-  console.log(wishItem[0])
-  $('.wish.fiveDivs.col.s9').html(wishItem)
+  console.log(wishItem)
+  $('.wish.fiveDivs.col.s9').append(wishItem)
 }
