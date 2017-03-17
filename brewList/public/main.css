@@ -1,6 +1,8 @@
 
 
-
+.searchLabel {
+    padding-left: 30vw;
+}
 
 .nav-wrapper {
   background-color: black;
@@ -124,6 +126,8 @@ header{
 .btn{
   background-color: #4FB0C6;
 }
+
+
 
 
 @media (max-width:401px) {

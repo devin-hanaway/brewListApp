@@ -65,7 +65,7 @@ header{
 
 .searchLabel{
   font-weight: bold;
-  font
+  padding-left: 25%;
 }
 
 .row.suggestedBeer {
@@ -80,4 +80,18 @@ header{
 
 html {
   font-family: mplus-1p-thin, Helvetica, arial, freesans, clean, sans-serif;
+}
+
+
+.wishListTitle{
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.wish.fiveDivs.col.s9{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: .4em;
+
 }

@@ -53,6 +53,14 @@ var wishItem =""
 var itemKey = ""
 
 
+var beerOneId = Math.floor((Math.random()*1000000000)+1);
+var beerTwoId = Math.floor((Math.random()*1000000000)+1);
+var beerThreeId = Math.floor((Math.random()*1000000000)+1);
+var beerFourId = Math.floor((Math.random()*1000000000)+1);
+var beerFiveId = Math.floor((Math.random()*1000000000)+1);
+
+
+
 $('document').ready(function(){
 
   $('button').click(function(){
@@ -151,6 +159,7 @@ $('document').ready(function(){
     state4 = data.response.beer.similar.items[3].brewery.location.brewery_state
 
 
+
     name5 = data.response.beer.similar.items[4].beer.beer_name
     logo5 = data.response.beer.similar.items[4].beer.beer_label
     style5 = data.response.beer.similar.items[4].beer.beer_style
@@ -158,6 +167,7 @@ $('document').ready(function(){
     brewery5 = data.response.beer.similar.items[4].brewery.brewery_name
     city5 = data.response.beer.similar.items[4].brewery.location.brewery_city
     state5 = data.response.beer.similar.items[4].brewery.location.brewery_state
+
 
     console.log(abv, name, brewery, name1, name2, name3, name4, name5)
     // return abv, name, brewery, name1, name2, name3, name4, name5
@@ -199,7 +209,7 @@ $('document').ready(function(){
   }
 
   function searchLabel(name){
-    var $searchLabel = '<div class="searchLabel">'+"Beers You Should Try if you like"+name+'</div>'
+    var $searchLabel = '<div class="searchLabel">'+"Recomended beers if you like: "+name+'</div>'
 
     return $searchLabel
   }
@@ -212,19 +222,19 @@ $('document').ready(function(){
       var $mainBeer = createMain(logo, name, style, abv, brewery,city,state)
       $(".favBeer").append($mainBeer)
 
-      var $beerOne = createSimilar(logo1, name1, style1, abv1, brewery1,city1,state1, 1)
+      var $beerOne = createSimilar(logo1, name1, style1, abv1, brewery1,city1,state1, beerOneId)
       $(".fiveDivs").append($beerOne)
 
-      var $beerTwo = createSimilar(logo2, name2, style2, abv2, brewery2,city2,state2, 2)
+      var $beerTwo = createSimilar(logo2, name2, style2, abv2, brewery2,city2,state2, beerTwoId)
       $(".fiveDivs").append($beerTwo)
 
-      var $beerThree = createSimilar(logo3, name3, style3, abv3, brewery3,city3,state3, 3)
+      var $beerThree = createSimilar(logo3, name3, style3, abv3, brewery3,city3,state3, beerThreeId)
       $(".fiveDivs").append($beerThree)
 
-      var $beerFour = createSimilar(logo4, name4, style4, abv4, brewery4,city4,state4, 4)
+      var $beerFour = createSimilar(logo4, name4, style4, abv4, brewery4,city4,state4, beerFourId)
       $(".fiveDivs").append($beerFour)
 
-      var $beerFive = createSimilar(logo5, name5, style5, abv5, brewery5,city5,state5,5)
+      var $beerFive = createSimilar(logo5, name5, style5, abv5, brewery5,city5,state5,beerFiveId)
       $(".fiveDivs").append($beerFive)
   }
 
@@ -240,6 +250,11 @@ $('document').ready(function(){
         var tag = "wishItem"+addToId
         console.log(tag)
         storeKey(dataToAdd, tag)
+        beerOneId += 5
+        beerTwoId += 5
+        beerThreeId += 5
+        beerFourId += 5
+        beerFiveId += 5
     })
   }
 
