@@ -33,8 +33,15 @@ main{
   padding-top: 8%;
 }
 .material-icons{
-  background-color: black;
-  opacity: .60;
+  background-color: white;
+}
+.btn-floating i {
+    width: inherit;
+    display: inline-block;
+    text-align: center;
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 40px;
 }
 
 .btn.waves-effect.waves-light{
@@ -94,4 +101,20 @@ html {
   justify-content: space-between;
   font-size: .4em;
 
+}
+
+.addFav.col.l3{
+  font-size: .55em;
+  font-weight: bold;
+  font-family: mplus-2p, Helvetica, arial, freesans, clean, sans-serif;
+}
+
+.searchLabel{
+    font-size: 1em;
+    font-family: mplus-2p, Helvetica, arial, freesans, clean, sans-serif;
+}
+
+.mainBeer {
+    font-size: 1em;
+    font-family: mplus-1p, Helvetica, arial, freesans, clean, sans-serif;
 }

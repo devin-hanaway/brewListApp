@@ -199,7 +199,7 @@ $('document').ready(function(){
            '<div class="brewery '+number+'" id="'+number+'">'+ brewery +'</div>'+
            '<div class="location '+number+'" id="'+number+'">'+ city+', '+state+'</div>'+
          '</div>'+
-         '<div class="addFav col l3">'+
+         '<div class="addFav col l3">'+'Add To Wish List  '+
             '<a class="btn-floating btn-large waves-effect waves-light red" >'+
             '<i class="material-icons" id="'+number+'">'+'add'+'</i>'+'</a>'+
           '</div>'+
