@@ -57,6 +57,9 @@ header{
 .tagLine{
   font-size: 30px;
   font-weight: bold;
+  align-self: center;
+  font-family: mplus-1p-thin, Helvetica, arial, freesans, clean, sans-serif;
+
 }
 /*.row{
     margin: 4%;
@@ -117,4 +120,26 @@ html {
 .mainBeer {
     font-size: 1em;
     font-family: mplus-1p, Helvetica, arial, freesans, clean, sans-serif;
+}
+.title{
+  font-family: mplus-2p, Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 2em;
+  align-self: center;
+}
+
+.welcome{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcomeMsg{
+  align-self: center;
+  font-family: mplus-2p-thin, Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 1em;
+}
+.hint{
+  align-self: center;
+  font-family: mplus-2p-thin, Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 1em;
 }
