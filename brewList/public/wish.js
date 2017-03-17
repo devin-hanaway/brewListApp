@@ -3,7 +3,7 @@ $('document').ready(function(){
   for (var i = 0; i < localStorage.length; i++) {
   var wishItem = localStorage.getItem(localStorage.key(i))
   var keyItem = localStorage.key(i)
-  var wishDiv =  '<li>'+'<input type="checkbox" for="'+keyItem+'"value="checkbox">'+''+wishItem+'</li>'
+  var wishDiv =  '<input type="checkbox" for="'+keyItem+'"value="checkbox">'+''<li>'+'+wishItem+'</li>'
 
   // '<label id="'+keyItem+'" class="wishItem">'+' '+wishItem+'</label>'+
 

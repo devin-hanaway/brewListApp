@@ -24,6 +24,7 @@ nav{
 
 main{
   padding-top: 64px;
+  padding-bottom: 7em;
 }
 
 .profile{
@@ -142,4 +143,36 @@ html {
   align-self: center;
   font-family: mplus-2p-thin, Helvetica, arial, freesans, clean, sans-serif;
   font-size: 1em;
+}
+.WishtagLine{
+  font-size: 30px;
+  font-weight: bold;
+  align-self: center;
+  font-family: mplus-1p-thin, Helvetica, arial, freesans, clean, sans-serif;
+}
+footer.page-footer {
+    background-color: #000000;
+    box-sizing: content-box;
+    opacity: .90;
+    /*max-height: 20vh;*/
+    margin-top: 100px;
+    position: fixed;
+    /*margin-top: 100px*/
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+.row.footer{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    padding: 0px;
 }
